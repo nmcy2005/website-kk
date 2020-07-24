@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>KinderKompass</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"></div>
+        <div class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links">
+            <div><a href="#home" id="home-link">Startseite</a></div>
+            <div><a href="#team" id="team-link">Team</a></div>
+            <div><a href="#task" id="task-link">Aufgabenfelder</a></div>
+            <div><a href="#contact" id="contact-link">Kontakt</a></div>
+        </div>
+    </nav>
+    <main>
+        <div id="home">
+            <div class="kompass-container"></div>
+            <div class="title">
+                Herzlich Willkommen auf der Seite von KinderKompass!
+                <div class="subtitle">
+                    KinderKompass steht für einen uneingenommenen und vertraulichen
+                    Blick.
+                </div>
+            </div>
+            <div class="angebot">
+                <h1>Die Angebote von KinderKompass umfassen:</h1>
+                <ul>
+                    <li>Ambulante Jugendhilfemaßnahmen gemäß §§ 27 ff SGB VIII</li>
+                    <li>Sorgerechtspflegschaften gemäß § 1630 BGB</li>
+                    <li>Vormundschaften gemäß §§ 1773 – 1895 BGB</li>
+                    <li>Ziel- und Zeitmanagement</li>
+                </ul>
+            </div>
+        </div>
+        <div class="desc">
+            <h2>Unsere Hauptaufgabe</h2>
+            <div>
+                <p>
+                    Die Hauptaufgabe liegt in der Hilfe zur Erziehung, welche vor Ort in
+                    der Familie geleistet wird. Sie basiert auf §27 ff SGB VIII, was
+                    bedeutet, dass sie ihren Blick vor allem auf die Förderung des
+                    Kindeswohls richtet.
+                </p>
+                <br />
+                <p>
+                    Zielgruppe sind Kinder, Jugendliche, Familien oder allein erziehende
+                    Personen.
+                </p>
+                <br />
+                <p>
+                    Grundannahme ist hierbei, dass es jedem Kind bzw. Jugendlichen zu
+                    Hause am besten geht. Von daher sind akute oder gar chronische
+                    Konflikte nach Möglichkeit so zu klären, dass das Familienleben
+                    (wieder) funktioniert und das Kind / der Jugendliche in einer seiner
+                    Entwicklung förderlichen Umgebung aufwachsen kann.
+                </p>
+                <br />
+                <p>
+                    Es gilt also, die im Kind / Jugendlichen und seiner Familie
+                    vorhandenen Ressourcen zu erkennen und zu stärken.
+                </p>
+            </div>
+        </div>
+        <div id="team">
+            <div class="team-content">
+                <h1>Unser Team</h1>
+                <div class="drawings">
+                    <div>
+                        <h3>Swaantje Traffa</h3>
+                        <img src="images/d1.jpg" />
+                        <div onclick="openTeam(1)">Über mich</div>
+                    </div>
+                    <div class="top_drawing">
+                        <h3>Petra Jung</h3>
+                        <img src="images/d2.jpg" />
+                        <div onclick="openTeam(2)">Über mich</div>
+                    </div>
+                    <div>
+                        <h3>Sina Pfeifer</h3>
+                        <img src="images/d3.JPG" />
+                        <div onclick="openTeam(3)">Über mich</div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="task">
+                <h1>Unsere Aufgabenfelder</h1>
+                <h3>
+                    Einige konfliktträchtige Bereiche, aus denen ein Hilfebedarf erwachsen
+                    kann, seien hier exemplarisch und stichwortartig aufgezählt:
+                </h3>
+                <ul>
+                    <li>Abweichendes Verhalten</li>
+                    <li>Umgang mit Aggressionen</li>
+                    <li>Hilfen für Kinder / Jugendliche mit AD(H)S</li>
+                    <li>
+                        Hilfen für Kinder / Jugendliche mit sozial-emotionalen Störungen
+                    </li>
+                    <li>
+                        Hilfen für Kinder / Jugendliche mit psychisch kranken Eltern(teil)
+                    </li>
+                    <li>Hilfen für Kinder / Jugendliche mit Behinderung</li>
+                    <li>Gestaltung von Beziehungen</li>
+                    <li>Erarbeitung und Einhaltung von Regeln in der Familie</li>
+                    <li>sinnvolle Gestaltung von Freizeit</li>
+                    <li>Schulabstinenz / Schulverweigerung</li>
+                    <li>Schule – Berufswahl und Umsetzung</li>
+                    <li>Kriseninterventionen</li>
+                    <li>Begleitete Umgänge</li>
+                </ul>
+                <h3>
+                    Mittels eines Netzwerkes von Kooperation, Trägern, Ämtern, Behörden,
+                    Ärzten, Vereinen, Kindergärten, Schulen, Arbeitsgemeinschaften etc.
+                    bestehen vielseitige Kontakte die genutzt und gepflegt werden.
+                </h3>
+            </div>
+            <div id="contact">
+                <h2>Kontakt</h2>
+                <form method="POST" action="https://mailthis.to/kim.logoshenko@gmx.de">
+                    <div class="form-mail-container">
+                        <h4>E-Mail*:</h4>
+                        <input class="form-mail" type="email" name="email" placeholder="Bitte E-Mailadresse eintragen"
+                            required />
+                    </div>
+                    <div class="form-select-container">
+                        <h4>Grund der Kontaktaufnahme*:</h4>
+                        <select class="form-select" name="reason">
+                            <option value="Fragen">Fragen</option>
+                            <option value="Informationen">Informationen</option>
+                            <option value="anderes">anderes</option>
+                        </select>
+                    </div>
+                    <div class="form-area-container">
+                        <h4>Nachricht*:</h4>
+                        <textarea class="form-area" name="message" required> </textarea>
+                    </div>
+                    <!-- <div class="form-send-container">
+                        <h4>Kopie an mich senden</h4>
+                        <input type="checkbox" name="send_copy" />
+                    </div> -->
+                    Mit * markierte Felder sind Pflichtfelder
+
+                    <input type="hidden" name="_after" value="https://kinderkompass.net/" />
+
+                    <input class="submit-btn" type="submit" value="Absenden" />
+                </form>
+            </div>
+    </main>
+    <div class="footer">
+        <div class="logo-footer"></div>
+        <div>
+            &copy; Petra Jung
+            <a href="disclaimer/disclaimer.html" class="footer-link">Impressum</a>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/15b049f7df.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

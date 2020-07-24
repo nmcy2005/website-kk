@@ -1,0 +1,607 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*headings*/
+
+h1 {
+  color: #bf1b22;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+nav {
+  height: 10vh;
+  background-color: rgb(230, 230, 230);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  width: 11vh;
+  height: 8vh;
+  background-image: url("./images/logo.png");
+  background-size: 100% 100%;
+  margin-left: 5vw;
+}
+
+nav .nav-links {
+  margin-right: 30px;
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .nav-links a,
+.footer-link {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+  font-size: 18px;
+  color: black;
+  border-bottom: 1px solid transparent;
+}
+
+nav .nav-links a:hover,
+.footer-link:hover {
+  color: #bf1b22;
+  border-bottom: 1px solid #bf1b22;
+  transition: all 0.3s ease-in-out;
+}
+
+#home {
+  height: 50vh;
+  background: url("./images/hero.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start; */
+
+  background: url("./images/hand_kompass.png") right bottom/50vh no-repeat;
+}
+
+.title {
+  color: #bf1b22;
+  font-size: 30px;
+  margin-left: 5vw;
+  margin-top: 18vh;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: rgb(97, 97, 97);
+  margin-top: 20px;
+}
+
+.angebot {
+  margin-left: 10vw;
+  margin-top: 5vh;
+}
+
+.angebot ul {
+  list-style-type: none;
+}
+
+.angebot li {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.desc {
+  height: 40vh;
+  background-color: #be565b;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-left: 5vw;
+}
+
+.desc > h2 {
+  color: black;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.desc > div {
+  width: 65vw;
+}
+
+#team {
+  height: 100vh;
+  background: url("./images/bg.jpg") no-repeat center/cover;
+}
+
+.team-content {
+  font-size: 80%;
+  padding-top: 12vh;
+  height: 100%;
+}
+
+.team-content > h1 {
+  text-align: center;
+  color: black;
+}
+
+.drawings {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.drawings h3 {
+  margin-bottom: 5%;
+}
+
+.drawings > div {
+  cursor: pointer;
+  margin-top: 15vh;
+  border-radius: 10px;
+  padding: 20px;
+  width: 18vw;
+  height: 50vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.top_drawing {
+  margin-top: 1px !important;
+}
+
+.drawings img {
+  max-height: 80%;
+  max-width: 100%;
+}
+
+.drawings > div > div {
+  background-color: #d35f65;
+  width: 80%;
+  max-width: 150px;
+  margin-top: 10px;
+  font-weight: 600;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawings > div > div:hover {
+  box-shadow: 0 0 5px black;
+  transition: all 0.15s ease-in-out;
+}
+
+#task {
+  height: 100vh;
+  background: url("./images/hero.jpg") no-repeat fixed;
+  background-size: 100% 100%;
+  padding-top: 12vh;
+}
+
+#task img {
+  width: 350px;
+}
+
+#task h1,
+#task h3 {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+#task ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+#task ul li {
+  height: 7vh;
+  width: 350px;
+  background-color: #be565b;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#task ul li:hover {
+  box-shadow: 0 0 10px black;
+  font-size: larger;
+}
+
+#contact {
+  height: 100vh;
+  background-color: #be565b;
+  padding-top: 12vh;
+}
+
+#contact h2 {
+  text-align: center;
+}
+
+#contact form {
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-mail-container,
+.form-area-container,
+.form-select-container,
+.form-send-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact input,
+#contact select {
+  min-width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+
+#contact h4 {
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 20vh;
+  width: 60vw;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  bottom: 0;
+  height: 10vh;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.logo-footer {
+  width: 10vh;
+  height: 8vh;
+  background-image: url("./images/logo_name.png");
+  background-size: 100% 100%;
+  margin-left: 5vw;
+}
+
+/* team content styles */
+
+.teams-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: url("./images/bg.jpg") center/cover;
+  background-size: 100% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teams-content {
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.picture-name-container {
+  height: 70vh;
+  width: 30vw;
+  background-color: #be565b;
+  border-radius: 7px;
+  text-align: justify;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.school-container,
+.experience-container {
+  padding: 10px;
+  height: 30vh;
+  width: 50vw;
+  background-color: #be565b;
+  border-radius: 7px;
+  text-align: justify;
+}
+
+.teams-main img {
+  max-width: 90%;
+  max-height: 55%;
+}
+
+.teams-main h5 {
+  font-size: large;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.teams-main h4 {
+  font-size: 3vh;
+  text-align: center;
+}
+
+/* disclaimer styles */
+
+.disclaimer-main {
+  width: 100%;
+  background: url("./images/background_team.jpg") no-repeat center/cover fixed;
+}
+
+.disclaimer-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  padding: 12vh 20% 12vh;
+}
+
+.disclaimer-main img {
+  height: 18px;
+}
+
+.disclaimer-main h1 {
+  margin-bottom: 50px;
+}
+
+.disclaimer-main h6 {
+  margin: 20px;
+  font-size: 18px;
+}
+
+.disclaimer-mail {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.disclaimer h3 {
+  margin-top: 50px;
+}
+
+.disclaimer h4 {
+  margin-top: 30px;
+}
+
+#mapid {
+  margin-top: 40px;
+  height: 40vh;
+  width: 60vw;
+  z-index: 100;
+}
+
+/* hamburger menu */
+
+.toggle-button {
+  position: absolute;
+  top: calc(5vh - 11px);
+  right: 5vh;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button span {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 5px;
+}
+
+/* smaller than 1200px */
+
+@media only screen and (max-width: 1200px) {
+  #home {
+    background: url("./images/hand_kompass.png") right bottom/50vh no-repeat;
+  }
+}
+
+/* smaller than 1000px */
+
+@media only screen and (max-width: 1000px) {
+  .drawings > div {
+    width: 25vh;
+  }
+
+  .title {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #home {
+    height: 80vh;
+    background: url("./images/hand_kompass.png") right bottom/50vh no-repeat;
+  }
+
+  .title {
+    width: 90%;
+  }
+
+  .desc {
+    height: 60vh;
+  }
+
+  #team {
+    height: 200vh;
+  }
+
+  .drawings {
+    flex-direction: column;
+  }
+
+  .top_drawing {
+    order: 1 !important;
+  }
+
+  .drawings > div {
+    width: 60vw;
+    margin-top: 50px !important;
+    order: 2;
+  }
+
+  #task ul li {
+    width: 280px;
+    height: 6vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* hamburger menu */
+  .toggle-button {
+    display: flex;
+  }
+
+  nav .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10vh;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: rgb(230, 230, 230);
+    border-top: 1px solid black;
+    padding-top: 2vh;
+  }
+
+  nav .nav-links > div {
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  /* hamburger */
+
+  .toggle-button-open {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bar-hidden {
+    display: none;
+  }
+
+  .bar-active-top {
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bar-active-bottom {
+    transform: translateY(-3px) rotate(-45deg);
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* other styles */
+  #home {
+    height: 90vh;
+    background: url("./images/hand_kompass.png") right bottom/35vh no-repeat;
+  }
+
+  .angebot {
+    margin-left: 5vw;
+    width: 90vw;
+  }
+
+  .desc {
+    height: 75vh;
+  }
+
+  .desc > div {
+    width: 85vw;
+  }
+
+  #task {
+    height: 160vh;
+  }
+
+  #task ul li {
+    width: 90vw;
+  }
+
+  /* disclaimer responsive styles */
+
+  .disclaimer-container {
+    padding: 12vh 5vw 12vh 5vw;
+  }
+
+  #mapid {
+    width: 90%;
+  }
+}
